@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from yatube.posts.models import Post
+from .models import Post, Group
 
 
 def index(requests):
@@ -32,11 +32,3 @@ def group_posts(request, slug):
 def groups_list(request):
     template = 'posts/groups_list.html'
     return render(request, template)
-
-
-
-
-'''def groups_detail(requests, pk):
-    return HttpResponse(f'Пост номер {pk}')'''
-
-
